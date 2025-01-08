@@ -1,0 +1,51 @@
+.contact {
+  background-color: var(--vintage-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact .content {
+  display: grid;
+  /* 반응형은 grid 조절 grid-template-columns: repeat(4, 1fr);  */
+  grid-template-columns: repeat(1, 1fr);
+  margin: 40px 0;
+  grid-gap: 20px;
+}
+
+.contact .content a {
+  height: 50px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: white;
+  transform: 0.5s;
+}
+
+.contact .content a ion-icon {
+  color: var(--deep-yellow);
+  font-size: 1.5em;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+
+.contact .content a:hover,
+.contact .content a:hover ion-icon {
+  color: var(--light-yellow);
+  transform: scale(1.1);
+}
+
+.copyright {
+  background-color: var(--vintage-blue);
+  color: var(--orange-yellow);
+  text-align: center;
+  padding: 10px;
+}
+
+.copyright p {
+  margin: 100px;
+  font-size: 16px;
+}

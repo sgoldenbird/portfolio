@@ -1,0 +1,24 @@
+.about {
+  background-color: var(--vintage-blue);
+}
+
+.about .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 0px;
+}
+.about .content .textBox {
+  min-width: 100%;
+  width: 100%;
+}
+.about .content .textBox p {
+  color: white;
+}
+
+.about .content .imgBox {
+  margin-left: 0px;
+}
+.about .content .imgBox img {
+  max-width: 100%;
+}

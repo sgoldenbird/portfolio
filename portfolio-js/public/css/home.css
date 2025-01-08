@@ -1,0 +1,54 @@
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+.banner .imgSidebar {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 100%;
+}
+.banner .imgSidebar img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner .contentBox h2 {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.banner .contentBox h2 span {
+  font-size: 1.5em;
+  color: var(--vintage-blue);
+  font-weight: 700;
+}
+
+.banner .contentBox h4 {
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1em;
+}
+
+p {
+  font-size: 1.1em;
+  margin: 20px 0;
+  font-weight: 300;
+}
+
+.btn {
+  background-color: var(--vintage-blue);
+  color: var(--light-yellow);
+  padding: 10px 30px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 2px;
+}

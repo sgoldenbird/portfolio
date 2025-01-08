@@ -1,0 +1,107 @@
+@import "/css/common.css";
+@import "/css/home.css";
+@import "/css/about.css";
+@import "/css/projects.css";
+@import "/css/contact.css";
+
+/* breakpoint 375, 768, 1024, 1440px  */
+
+@media (min-width: 768px) {
+  /* common */
+  .languages {
+    font-size: 1.1em;
+  }
+  .menuIcon {
+    width: 35px;
+    height: 30px;
+  }
+
+  /* home */
+  .banner .contentBox h2 {
+    font-size: 1.5em;
+  }
+
+  /* projects */
+  .projects .content .projectsBox {
+    width: 265px;
+    margin: 10px;
+  }
+
+  /* contact */
+  .contact .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  /* common */
+  .languages {
+    left: 100px;
+  }
+
+  section {
+    padding: 100px;
+  }
+
+  .sidebar ul li a {
+    font-size: 2em;
+  }
+
+  /* home */
+  .banner .imgSidebar {
+    display: block;
+  }
+
+  .banner .contentBox,
+  .sidebar {
+    width: calc(100% - 500px);
+    padding: 100px;
+  }
+
+  /* about */
+  .about .content {
+    flex-direction: row;
+  }
+
+  .about .content .textBox {
+    min-width: 49%;
+    width: 49%;
+  }
+
+  .about .content {
+    margin-top: 40px;
+  }
+
+  .about .content .imgBox {
+    margin-left: 40px;
+  }
+
+  /* contact */
+  .contact .content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .contact .content a {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* common */
+  .languages {
+    font-size: 1.2em;
+  }
+  .menuIcon {
+    width: 40px;
+    height: 35px;
+  }
+
+  /* home */
+  .banner .contentBox h2 {
+    font-size: 2em;
+  }
+
+  .btn {
+    font-size: 1.1em;
+  }
+}
