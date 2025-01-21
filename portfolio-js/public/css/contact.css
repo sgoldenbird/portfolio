@@ -1,15 +1,16 @@
 .contact {
   background-color: var(--vintage-blue);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+.contact .title h4 {
+  color: white;
+  font-size: 1.1rem;
+  padding-top: 1.8em;
 }
 
 .contact .content {
   display: grid;
-  /* 반응형은 grid 조절 grid-template-columns: repeat(4, 1fr);  */
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   margin: 40px 0;
   grid-gap: 20px;
 }
@@ -25,17 +26,18 @@
   transform: 0.5s;
 }
 
-.contact .content a ion-icon {
-  color: var(--deep-yellow);
+.contact .content a box-icon {
+  fill: var(--deep-yellow);
   font-size: 1.5em;
   margin-right: 10px;
   transition: 0.5s;
+  transform: translateY(-0.4rem);
 }
 
 .contact .content a:hover,
-.contact .content a:hover ion-icon {
-  color: var(--light-yellow);
-  transform: scale(1.1);
+.contact .content a:hover box-icon {
+  fill: var(--light-yellow);
+  transform: scale(1.1) translateY(-0.4rem);
 }
 
 .copyright {

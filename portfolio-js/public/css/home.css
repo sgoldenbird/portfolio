@@ -3,7 +3,7 @@
   width: 100%;
   min-height: 100vh;
 }
-.banner .imgSidebar {
+.banner .side-img {
   display: none;
   position: absolute;
   top: 0;
@@ -11,7 +11,7 @@
   width: 500px;
   height: 100%;
 }
-.banner .imgSidebar img {
+.banner .side-img img {
   position: absolute;
   top: 0;
   left: 0;
@@ -20,30 +20,45 @@
   object-fit: cover;
 }
 
-.banner .contentBox h2 {
-  font-size: 1em;
+.banner h2 {
+  font-size: 1.3em;
   font-weight: 300;
+  margin-bottom: 20px;
 }
 
-.banner .contentBox h2 span {
+.frontend-dev {
   font-size: 1.5em;
   color: var(--vintage-blue);
   font-weight: 700;
 }
 
-.banner .contentBox h4 {
-  font-size: 1.1em;
+.banner h4 {
+  font-size: 1em;
   font-weight: 300;
-  line-height: 1em;
+  line-height: 1.8em;
+}
+
+.banner .keyword {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: black;
+  background-color: var(--keyword-bg-color);
+
+  padding: 0 4px;
+  border-radius: 3px;
 }
 
 p {
-  font-size: 1.1em;
+  font-size: 1em;
   margin: 20px 0;
   font-weight: 300;
 }
 
-.btn {
+.banner .btns {
+  margin-top: 3rem;
+}
+
+.banner .btn {
   background-color: var(--vintage-blue);
   color: var(--light-yellow);
   padding: 10px 30px;

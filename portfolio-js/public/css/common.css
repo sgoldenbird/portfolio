@@ -1,48 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-:lang(ko) {
-  font-family: "Noto Sans KR", sans-serif;
-}
-
-:lang(en) {
-  font-family: "Poppins", sans-serif;
-}
-
-:root {
-  --background-color: #e7e5d6;
-  --vintage-blue: #406882;
-  --navy-blue: #20323e;
-  --light-yellow: #f8ee84;
-  --deep-yellow: #ddb665;
-  --orange-yellow: #e8b069;
-  --tailwind-color: #06b6d4;
-  --html5-color: #e34f26;
-  --css3-color: #1572b6;
-  --javascript-color: #f7df1e;
-  --typescript-color: #3178c6;
-  --nextjs-color: #000000;
-  --nodejs-color: #5fa04e;
-  --react-color: #61dafb;
-  --react-router: #ca4245;
-  --react-query: #ff4154;
-  --styled-components: #db7093;
-  --firebase-color: #dd2c00;
-  --figma-color: #f24e1e;
-  --notion-color: #000000;
-  --github-color: #181717;
-}
-
-body {
-  background-color: var(--background-color);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
-}
-
 section {
   padding: 40px;
   min-height: 100vh;
@@ -67,14 +22,15 @@ section {
   cursor: pointer;
 }
 
-.menuIcon {
+/* 사이드 바  */
+.menu-icon {
   position: fixed;
   top: 3%;
   right: 3%;
   width: 30px;
   height: 25px;
   background-color: var(--navy-blue);
-  color: white;
+  fill: white;
   background-size: 20px;
   background-position: center;
   background-repeat: no-repeat;
@@ -82,8 +38,7 @@ section {
   z-index: 1000;
 }
 
-/* 사이드 바  */
-.banner .contentBox,
+.banner,
 .sidebar {
   position: absolute;
   top: 0;

@@ -1,107 +1,52 @@
 @import "/css/common.css";
 @import "/css/home.css";
 @import "/css/about.css";
+@import "/css/skills.css";
 @import "/css/projects.css";
+@import "/css/activities.css";
 @import "/css/contact.css";
+@import "/css/response.css";
+@import "/css/project_detail.css";
 
-/* breakpoint 375, 768, 1024, 1440px  */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-@media (min-width: 768px) {
-  /* common */
-  .languages {
-    font-size: 1.1em;
-  }
-  .menuIcon {
-    width: 35px;
-    height: 30px;
-  }
-
-  /* home */
-  .banner .contentBox h2 {
-    font-size: 1.5em;
-  }
-
-  /* projects */
-  .projects .content .projectsBox {
-    width: 265px;
-    margin: 10px;
-  }
-
-  /* contact */
-  .contact .content {
-    grid-template-columns: repeat(2, 1fr);
-  }
+:root {
+  --background-color: #e7e5d6;
+  --vintage-blue: #406882;
+  --navy-blue: #20323e;
+  --light-yellow: #f8ee84;
+  --deep-yellow: #ddb665;
+  --orange-yellow: #e8b069;
+  --keyword-bg-color: #fff9f4;
+  --status-color: #777;
+  --hover-color: #efefef;
+  --activity-bg-color: #fff;
+  --activity-border-color: #ddd;
+  --tailwind-color: #06b6d4;
+  --html5-color: #e34f26;
+  --css3-color: #1572b6;
+  --javascript-color: #f7df1e;
+  --typescript-color: #3178c6;
+  --nextjs-color: #000000;
+  --nodejs-color: #5fa04e;
+  --react-color: #61dafb;
+  --react-router: #ca4245;
+  --react-query: #ff4154;
+  --styled-components: #db7093;
+  --firebase-color: #dd2c00;
+  --figma-color: #f24e1e;
+  --notion-color: #000000;
+  --github-color: #181717;
 }
 
-@media (min-width: 1024px) {
-  /* common */
-  .languages {
-    left: 100px;
-  }
-
-  section {
-    padding: 100px;
-  }
-
-  .sidebar ul li a {
-    font-size: 2em;
-  }
-
-  /* home */
-  .banner .imgSidebar {
-    display: block;
-  }
-
-  .banner .contentBox,
-  .sidebar {
-    width: calc(100% - 500px);
-    padding: 100px;
-  }
-
-  /* about */
-  .about .content {
-    flex-direction: row;
-  }
-
-  .about .content .textBox {
-    min-width: 49%;
-    width: 49%;
-  }
-
-  .about .content {
-    margin-top: 40px;
-  }
-
-  .about .content .imgBox {
-    margin-left: 40px;
-  }
-
-  /* contact */
-  .contact .content {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .contact .content a {
-    justify-content: center;
-  }
+body {
+  background-color: var(--background-color);
 }
 
-@media (min-width: 1440px) {
-  /* common */
-  .languages {
-    font-size: 1.2em;
-  }
-  .menuIcon {
-    width: 40px;
-    height: 35px;
-  }
-
-  /* home */
-  .banner .contentBox h2 {
-    font-size: 2em;
-  }
-
-  .btn {
-    font-size: 1.1em;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Noto Sans KR", sans-serif;
+  scroll-behavior: smooth;
 }

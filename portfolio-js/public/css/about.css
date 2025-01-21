@@ -2,23 +2,141 @@
   background-color: var(--vintage-blue);
 }
 
-.about .content {
+.content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-top: 0px;
 }
-.about .content .textBox {
-  min-width: 100%;
-  width: 100%;
-}
-.about .content .textBox p {
-  color: white;
+
+/* 핵심 역량 */
+.competencies-box {
+  background: var(--background-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.about .content .imgBox {
+.competencies-box h3 {
+  font-size: 1.4rem;
+  color: var(--navy-blue);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--keyword-bg-color);
+  padding-bottom: 8px;
+}
+
+.competencies {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.competencies li {
+  margin-bottom: 15px;
+  padding: 15px;
+  background: var(--background-color);
+  border-left: 4px solid var(--deep-yellow);
+  border-radius: 4px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.competencies li:hover {
+  transform: translateX(5px);
+}
+
+/* 키워드 강조 */
+.competencies li .keyword {
+  display: block;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--navy-blue);
+  margin-bottom: 8px;
+}
+
+/* 학력 */
+.education-box {
+  background: var(--background-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education-box h3 {
+  font-size: 1.4rem;
+  color: var(--navy-blue);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--keyword-bg-color);
+  padding-bottom: 8px;
+}
+
+.education {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  border-left: 2px dashed var(--navy-blue);
+  padding-left: 30px;
+}
+
+.education li {
+  margin-bottom: 25px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "year details"
+    "status major";
+  gap: 4px 8px;
+  align-items: center;
+}
+
+.education li::before {
+  content: "";
+  position: absolute;
+  left: -23px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--deep-yellow);
+  border: 3px solid var(--keyword-bg-color);
+  border-radius: 50%;
+}
+
+/* 학력 항목의 세부 정보 */
+.education li div {
+  margin-right: 8px;
+}
+
+.education .date {
+  font-weight: 600;
+  color: var(--navy-blue);
+  grid-area: year;
+}
+
+.education .school {
+  grid-area: details;
+  margin-right: 20px;
+}
+
+.education .status {
+  grid-area: status;
+  margin-right: 10px;
+  font-size: 0.9rem;
+  color: var(--status-color);
+}
+
+.education .major {
+  grid-area: major;
+  font-size: 1rem;
+  color: var(--status-color);
+}
+
+.img-box {
   margin-left: 0px;
 }
-.about .content .imgBox img {
+.img-box img {
   max-width: 100%;
 }

@@ -1,0 +1,213 @@
+/* breakpoint 375, 768, 1024, 1440px  */
+
+@media (min-width: 768px) {
+  /* common */
+  .languages {
+    font-size: 1.1em;
+  }
+  .menu-icon {
+    width: 35px;
+    height: 30px;
+  }
+
+  /* home */
+  p {
+    font-size: 1.2em;
+  }
+
+  .banner h2 {
+    font-size: 1.5em;
+  }
+
+  .frontend-dev,
+  .my-name {
+    display: inline;
+  }
+
+  /* projects */
+  .projects .content .projects-box {
+    width: 265px;
+    margin: 10px;
+  }
+
+  /* activities */
+  .activities-box {
+    margin-top: 2rem;
+    padding: 0 2rem;
+  }
+
+  .activity-box summary {
+    padding: 1rem 1.5rem;
+  }
+
+  .date {
+    font-size: 1rem;
+  }
+
+  .activity-category {
+    font-size: 0.85rem;
+  }
+
+  .activity-header h4 {
+    font-size: 1.125rem;
+  }
+
+  .activity-details {
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+    line-height: 2.2;
+  }
+
+  /* contact */
+  .contact .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  /* common */
+  .languages {
+    left: 100px;
+  }
+
+  section {
+    padding: 100px;
+  }
+
+  .sidebar ul li a {
+    font-size: 2em;
+  }
+
+  /* home */
+  .banner .side-img {
+    display: block;
+  }
+
+  .banner .content-box {
+    width: calc(100% - 500px);
+    padding: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  /* about */
+
+  .about .content {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "comp img"
+      "comp edu";
+    grid-gap: 2%;
+    margin-top: 40px;
+  }
+
+  .about .content .competencies-box {
+    grid-area: comp;
+  }
+
+  .about .content .img-box {
+    grid-area: img;
+  }
+
+  .about .content .education-box {
+    grid-area: edu;
+  }
+
+  /* activities */
+  .activities-box {
+    margin-top: 2.5rem;
+    padding: 0 3rem;
+  }
+
+  .activity-box summary {
+    padding: 1.25rem 2rem;
+  }
+
+  .date {
+    font-size: 1.1rem;
+  }
+
+  .activity-category {
+    font-size: 0.9rem;
+  }
+
+  .activity-header h4 {
+    font-size: 1.25rem;
+  }
+
+  .activity-details {
+    padding: 2rem 3rem;
+    font-size: 1.1rem;
+    line-height: 2.4;
+  }
+
+  /* contact */
+  .contact .content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .contact .content a {
+    justify-content: center;
+  }
+
+  .contact .title h4 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* common */
+  .languages {
+    font-size: 1.2em;
+  }
+  .menu-icon {
+    width: 40px;
+    height: 35px;
+  }
+
+  /* home */
+  p,
+  .banner h4,
+  .banner .keyword {
+    font-size: 1.2em;
+  }
+
+  .banner h2 {
+    font-size: 2em;
+  }
+
+  .banner .btn {
+    font-size: 1.1em;
+  }
+
+  /* activities */
+  .activities-box {
+    margin-top: 3rem;
+    padding: 0 4rem;
+  }
+
+  .activity-box summary {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .date {
+    font-size: 1.2rem;
+  }
+
+  .activity-category {
+    font-size: 1rem;
+  }
+
+  .activity-header h4 {
+    font-size: 1.5rem;
+  }
+
+  .activity-details {
+    padding: 2.5rem 4rem;
+    font-size: 1.2rem;
+    line-height: 2.5;
+  }
+}
