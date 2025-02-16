@@ -3,7 +3,6 @@ import "./style.css";
 document.addEventListener("DOMContentLoaded", function () {
   const menuIcon = document.querySelector(".menu-icon");
   const sidebar = document.querySelector(".sidebar");
-
   const menu = document.createElement("ul");
   menu.classList.add("menu");
   const menuItems = [
@@ -14,29 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     { name: "Activities", anchor: "#activities" },
     { name: "Contact", anchor: "#contact" },
   ];
-  menuItems.forEach((item) => {
-    const li = document.createElement("li");
-    const a = document.createElement("a");
-    a.href = item.anchor;
-    a.textContent = item.name;
-    li.appendChild(a);
-
-    menu.appendChild(li);
-  });
-  sidebar.appendChild(menu);
-
-  function menuToggle() {
-    sidebar.classList.toggle("active");
-    if (menuIcon.name === "menu-outline") {
-      menuIcon.name = "close-circle-outline";
-    } else {
-      menuIcon.name = "menu-outline";
-    }
-  }
-
-  menuIcon.addEventListener("click", menuToggle);
-  sidebar.addEventListener("click", menuToggle);
-
   const sections = [
     "home",
     "about",
@@ -45,29 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
     "activities",
     "contact",
   ];
-  loadSectionsInOrder(sections, 0);
-
-  function loadSectionsInOrder(sections, index) {
-    if (index < sections.length) {
-      const section = sections[index];
-      fetch(`/html/${section}.html`)
-        .then((response) => response.text())
-        .then((html) => {
-          document
-            .getElementById("sections")
-            .insertAdjacentHTML("beforeend", html);
-          if (section === "projects") {
-            initializeProjects();
-          }
-          if (section === "activities") {
-            appendActivitiesData();
-          }
-          loadSectionsInOrder(sections, index + 1);
-        });
-    }
-  }
-
-  // 프로젝트
   const projects = [
     {
       name: "Fresh Trash",
@@ -176,43 +129,6 @@ document.addEventListener("DOMContentLoaded", function () {
       vercel: "",
     },
   ];
-
-  function initializeProjects() {
-    const projectContainer = document.getElementById("projects-content");
-    if (projectContainer) {
-      projects.forEach((project, index) => {
-        const projectHTML = `
-          <div class="projects-box" data-index="${index}" >
-            <div class="img-box">
-              <img src="${project.image}" alt="${project.alt}" />
-            </div>
-            <div class="text-box">
-              <h3>${project.name}</h3>
-            </div>
-          </div>
-        `;
-        projectContainer.insertAdjacentHTML("beforeend", projectHTML);
-      });
-
-      // 모든 프로젝트 박스에 클릭 이벤트 추가
-      const projectBoxes = document.querySelectorAll(".projects-box");
-      projectBoxes.forEach((box, index) => {
-        box.addEventListener("click", () => {
-          const githubLink = projects[index].github;
-          if (githubLink) {
-            // GitHub 링크로 바로 이동
-            window.location.href = githubLink;
-          } else {
-            console.error("GitHub 링크가 제공되지 않았습니다.");
-          }
-        });
-      });
-    } else {
-      console.error("Project container not found!");
-    }
-  }
-
-  // 활동
   const activitiesData = [
     {
       category: "교육",
@@ -304,6 +220,88 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   ];
+
+  // 메뉴
+  menuItems.forEach((item) => {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = item.anchor;
+    a.textContent = item.name;
+    li.appendChild(a);
+
+    menu.appendChild(li);
+  });
+  sidebar.appendChild(menu);
+
+  function menuToggle() {
+    sidebar.classList.toggle("active");
+    if (menuIcon.name === "menu-outline") {
+      menuIcon.name = "close-circle-outline";
+    } else {
+      menuIcon.name = "menu-outline";
+    }
+  }
+
+  menuIcon.addEventListener("click", menuToggle);
+  sidebar.addEventListener("click", menuToggle);
+
+  loadSectionsInOrder(sections, 0);
+
+  function loadSectionsInOrder(sections, index) {
+    if (index < sections.length) {
+      const section = sections[index];
+      fetch(`/html/${section}.html`)
+        .then((response) => response.text())
+        .then((html) => {
+          document
+            .getElementById("sections")
+            .insertAdjacentHTML("beforeend", html);
+          if (section === "projects") {
+            initializeProjects();
+          }
+          if (section === "activities") {
+            appendActivitiesData();
+          }
+          loadSectionsInOrder(sections, index + 1);
+        });
+    }
+  }
+
+  // 프로젝트
+  function initializeProjects() {
+    const projectContainer = document.getElementById("projects-content");
+    if (projectContainer) {
+      projects.forEach((project, index) => {
+        const projectHTML = `
+          <div class="projects-box" data-index="${index}" >
+            <div class="img-box">
+              <img src="${project.image}" alt="${project.alt}" />
+            </div>
+            <div class="text-box">
+              <h3>${project.name}</h3>
+            </div>
+          </div>
+        `;
+        projectContainer.insertAdjacentHTML("beforeend", projectHTML);
+      });
+
+      // 모든 프로젝트 박스에 클릭 이벤트 추가
+      const projectBoxes = document.querySelectorAll(".projects-box");
+      projectBoxes.forEach((box, index) => {
+        box.addEventListener("click", () => {
+          const githubLink = projects[index].github;
+          if (githubLink) {
+            // GitHub 링크로 바로 이동
+            window.location.href = githubLink;
+          } else {
+            console.error("GitHub 링크가 제공되지 않았습니다.");
+          }
+        });
+      });
+    } else {
+      console.error("Project container not found!");
+    }
+  }
 
   // 활동 카테고리 별 리스트
   function generateActivity(activity) {
