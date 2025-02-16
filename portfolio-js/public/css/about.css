@@ -36,7 +36,7 @@
   margin-bottom: 15px;
   padding: 15px;
   background: var(--background-color);
-  border-left: 4px solid var(--deep-yellow);
+  border-left: 4px solid var(--vintage-blue);
   border-radius: 4px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -100,7 +100,7 @@
   top: 0;
   width: 10px;
   height: 10px;
-  background-color: var(--deep-yellow);
+  background-color: var(--vintage-blue);
   border: 3px solid var(--keyword-bg-color);
   border-radius: 50%;
 }

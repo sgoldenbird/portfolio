@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
         역할: "수료생",
         주요학습:
           "소프트웨어 엔지니어링 전반적 이해, Git, Git협업, 웹개발, 데이터 다루기, mongDB",
-        성과: "협업에 필요한 기술들을 익히고 실습, NOSQL 데이터 다루기 학습",
+        성과: "협업에 필요한 기술들을 익히고 실습, NoSQL 데이터 다루기 학습",
       },
     },
     {
